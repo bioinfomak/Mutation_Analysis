@@ -9,7 +9,7 @@ suppressPackageStartupMessages({
 })
 
 ## 2. Set working directory
-setwd("C:/Users/S Sarkar/Desktop/TGS_ALS_OLD")
+setwd("PATH")
 
 ## 3. List all MAF files
 maf_files <- list.files(
@@ -35,13 +35,13 @@ merged_maf <- merge_mafs(
 ## Save merged MAF
 write.table(
   merged_maf@data,
-  file = "MiSeq_OLD_ALS_merged.maf",
+  file = "FILE_NAME",
   sep = "\t",
   quote = FALSE,
   row.names = FALSE
 )
 
-maf <- read.maf("MiSeq_OLD_ALS_merged.maf")
+maf <- read.maf("FILE_NAME")
 
 ############################################################
 ## 7. BASIC QC & SUMMARY
@@ -129,5 +129,5 @@ somaticInteractions(
 ############################################################
 ## 9. Save R object for later use
 ############################################################
-saveRDS(merged_maf, file = "ALS_merged_maf.rds")
+saveRDS(merged_maf, file = "FILE_NAME.rds")
 
